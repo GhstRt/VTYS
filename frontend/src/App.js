@@ -1,22 +1,26 @@
-import React from "react";
-import Features from "./components/Features";
-import Header from "./components/Header";
-import {Route,Routes} from "react-router-dom";
 
+import React from 'react';
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router,Switch, Route, Routes} from 'react-router-dom';
+import './App.css';
+import Home from './components/pages/Home';
+import Services from './components/pages/Services';
+import Products from './components/pages/Products';
+import SignUp from './components/pages/SignUp';
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      
-       <Routes>
-        <Route path="/Ai" element={<Features/>}/>
-
-       </Routes>
-        
-      
-        
-        
-    </div>
+    <>
+      <Router>
+       <Navbar />
+        <Routes>
+          <Route path='/' exact Component ={Home} />
+          <Route path='/services' exact Component ={Services} />
+          <Route path='/products' exact Component ={Products} />
+          <Route path='/sign-up' exact Component ={SignUp} />
+        </Routes>
+      </Router>
+    
+      </>
   );
 }
 
