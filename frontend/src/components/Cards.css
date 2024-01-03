@@ -22,9 +22,12 @@
   }
   
   .cards__items {
+    display: grid;
+    width: 500px; 
+    grid-template-columns:500px 500px;
     margin-bottom: 24px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:center;
   }
   
   .cards__item {
