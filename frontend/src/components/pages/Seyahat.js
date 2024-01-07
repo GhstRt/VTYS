@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './PlaceTable.css'; // Stil dosyasını ekleyin
+import './PlaceTable.css'; 
 
 const PlaceTable = () => {
   const [places, setPlaces] = useState([]);
