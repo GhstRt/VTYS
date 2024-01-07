@@ -1,0 +1,28 @@
+.place-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.place-table th, .place-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.place-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.place-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.place-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.index-column {
+  font-weight: bold;
+}
