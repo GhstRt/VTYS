@@ -35,9 +35,9 @@ function Cards() {
               <CardItem
                 key={place._id}
                 path={`/${place._id}`}
-                label={place.location}
-                src={place.pictureLink}
-                name={place.name}
+                label={place['Location']}
+                src={place['Picture link']}
+                name={place['Name']}
               />
             ))}
           </ul>
