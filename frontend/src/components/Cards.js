@@ -34,7 +34,7 @@ function Cards() {
             {places.map((place) => (
               <CardItem
                 key={place._id}
-                path={`/seyahat/${place._id}`}
+                path={`/${place._id}`}
                 label={place.location}
                 src={place.pictureLink}
                 name={place.name}
