@@ -1,24 +1,21 @@
 // CardItem.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function CardItem(props) {
+const CardItem = ({ to, label, src, name }) => {
   return (
     <li className='cards__item'>
-      <Link className='cards__item__link' to={props.path}>
-        <figure className='cards__item__pic-wrap' data-category={props.name}>
-          <img
-            className='cards__item__img'
-            alt='AasdK  '
-            src={props.src}
-          />
+      <Link to={to} className='cards__item__link'>
+        <figure className='cards__item__pic-wrap' data-category={label}>
+          <img className='cards__item__img' alt={name} src={src} />
         </figure>
         <div className='cards__item__info'>
-          <h5 className='cards__item__text'>{props.name}</h5>
+          <h5 className='cards__item__text'>{name}</h5>
         </div>
       </Link>
     </li>
   );
-}
+};
 
 export default CardItem;
