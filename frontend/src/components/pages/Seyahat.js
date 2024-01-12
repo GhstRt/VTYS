@@ -8,8 +8,8 @@ const PlaceTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/places/');
-        setPlaces(response.data);
+        const response = await axios.get('http://localhost:3001/api/places/');
+        setPlaces(response.data.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -45,16 +45,16 @@ const PlaceTable = () => {
               <td>{place.Longitude}</td>
               <td>{place.Location}</td>
               <td>
-                <a href={place['Wikipedia link']} target="_blank" rel="noopener noreferrer">
+                <a href={place.wikipediaLink} target="_blank" rel="noopener noreferrer">
                   Wikipedia Link
                 </a>
               </td>
               <td>
-                <a href={place['Picture link']} target="_blank" rel="noopener noreferrer">
+                <a href={place.pictureLink} target="_blank" rel="noopener noreferrer">
                   Picture Link
                 </a>
               </td>
-              <td>{place['Build in year']}</td>
+              <td>{place.buildInYear}</td>
             </tr>
           ))}
         </tbody>

@@ -12,10 +12,10 @@ function Cards() {
     const fetchData = async () => {
       try {
         const response = selectedPlace
-          ? await axios.get(`http://localhost:3001/places/${selectedPlace}`)
-          : await axios.get('http://localhost:3001/places');
-
-        setPlaces(response.data);
+          ? await axios.get(`http://localhost:3001/api/places/${selectedPlace}`)
+          : await axios.get('http://localhost:3001/api/places/');
+        console.log(response.data.data)
+        setPlaces(response.data.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -34,10 +34,10 @@ function Cards() {
           <ul className='cards__items'>
             {places.map((place) => (
              <CardItem
-             key={place._id}
-             to={`${place._id}`} // Link içindeki "to" prop'u
+             key={place["Name"]}
+             to={`${place["Name"]}`} // Link içindeki "to" prop'u
              label={place['Location']}
-             src={place['Picture link']}
+             src={place['pictureLink']}
              name={place['Name']}
            />
            
