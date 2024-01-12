@@ -1,5 +1,3 @@
-// Cards.js
-
 import React, { useState, useEffect } from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
