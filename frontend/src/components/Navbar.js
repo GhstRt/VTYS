@@ -50,7 +50,7 @@ function Navbar() {
                         </li>
                         <li className='nav-item'>
                             <Link to='/ai' className='nav-links' onClick={closeMobileMenu}>
-                                Ai
+                                Chat
                             </Link>
                         
                         </li>

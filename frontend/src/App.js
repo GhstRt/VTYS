@@ -5,7 +5,7 @@ import {BrowserRouter as Router,Switch, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home';
 import Seyahat from './components/pages/Seyahat';
-import Ai from './components/pages/Ai';
+import Ai from './components/pages/Chat';
 import PlaceDetail from './components/pages/PlaceDetail';
 //import Place from '../../server/models/place';
 
